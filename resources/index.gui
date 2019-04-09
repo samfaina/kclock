@@ -5,9 +5,9 @@
       gradient-x2="50%+150" gradient-y2="50%+150"
       gradient-color1="fb-pink"
       gradient-color2="fb-black" />
-  <arc class="backgroundArc" x="50%-125" y="50%-125" width="250" height="250" />
+  <!-- <arc class="backgroundArc" x="50%-125" y="50%-125" width="250" height="250" />
   <arc class="backgroundArc" x="50%-115" y="50%-115" width="230" height="230" />
-  <arc class="backgroundArc" x="50%-105" y="50%-105" width="210" height="210" />
+  <arc class="backgroundArc" x="50%-105" y="50%-105" width="210" height="210" /> -->
 
   <arc id="smallArc" />
   <arc id="mediumArc" />
