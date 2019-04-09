@@ -1,0 +1,76 @@
+<svg class="background" >
+   <gradientRect id="gradient" x="0" y="0" width="100%" height="100%"
+      gradient-type="radial"
+      gradient-x1="50%" gradient-y1="50%"
+      gradient-x2="50%+150" gradient-y2="50%+150"
+      gradient-color1="fb-pink"
+      gradient-color2="fb-black" />
+  <arc class="backgroundArc" x="50%-125" y="50%-125" width="250" height="250" />
+  <arc class="backgroundArc" x="50%-115" y="50%-115" width="230" height="230" />
+  <arc class="backgroundArc" x="50%-105" y="50%-105" width="210" height="210" />
+
+  <arc id="smallArc" />
+  <arc id="mediumArc" />
+  <arc id="largeArc" />
+
+  <defs>
+    <symbol id="clockDef" class="text" >
+      <text id="digits" class="mainText" >00:00</text>
+      <text id="date" class="subText" />
+      <animate attributeName="opacity"
+                begin="enable"
+                from="0"
+                to="1"
+                dur="0.3"
+                final="keep"
+                easing="ease-out" />
+      <text id="weatherLoc">...</text>
+      <image id="weatherIcon" href="" load="sync"/>
+      <text id="weatherTemp"/>
+    </symbol>
+
+       <symbol id="stepsDef" class="text" >
+      <text id="stepCount" class="mainText" >0</text>
+      <text class="subText" >steps</text>
+      <animate attributeName="opacity"
+                begin="enable"
+                from="0"
+                to="1"
+                dur="0.12"
+                final="keep"
+                easing="ease-out" />
+    </symbol>
+
+    <symbol id="caloriesDef" class="text" >
+      <text id="calorieCount" class="mainText" >0</text>
+      <text class="subText" >calories</text>
+      <animate attributeName="opacity"
+                begin="enable"
+                from="0"
+                to="1"
+                dur="0.12"
+                final="keep"
+                easing="ease-out" />
+    </symbol>
+
+    <symbol id="heartRateDef" class="text" >
+      <text id="bpm" class="mainText" >--</text>
+      <text class="subText" >bpm</text>
+      <animate attributeName="opacity"
+                begin="enable"
+                from="0"
+                to="1"
+                dur="0.12"
+                final="keep"
+                easing="ease-out" />
+    </symbol>
+
+  </defs>
+
+  <use id="clock" href="#clockDef" display="inline" />
+  <use id="steps" href="#stepsDef" display="none" />
+  <use id="calories" href="#caloriesDef" display="none" />
+  <use id="heartRate" href="#heartRateDef" display="none" />
+
+  <use id="screenButton" href="#push-button" y="0" height="100%" opacity="0" />
+</svg>
