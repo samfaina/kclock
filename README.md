@@ -17,7 +17,7 @@ Clone the code and build it with [FitbitStudio](https://studio.fitbit.com) proje
 
 In order to get working, you need to add your Openweather API KEY.
 
-`companion/openweather_apikey.js:`
+`common/openweather_apikey.js:`
 ```javascript
 export const API_KEY = "YOUR_API_KEY";
 ```
