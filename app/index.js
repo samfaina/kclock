@@ -30,9 +30,9 @@ let sm = new StateManager();
 let $ = id => document.getElementById(id);
 
 // weather stuff
-
 // Request weather data from the companion
 function fetchWeather(command) {
+
   if (messaging.peerSocket.readyState === messaging.peerSocket.OPEN) {
     // Send a command to the companion
     messaging.peerSocket.send({
@@ -87,9 +87,11 @@ sm.addState(
       let time = new Date();
       let seconds = time.getSeconds();
       let minutes = time.getMinutes();
+      console.log( time.getHours() % 12);
       let hours = time.getHours() % 12;
 
       let hoursStr = monoDigits(hours ? hours : 12);
+      console.log(hoursStr);
       let minutesStr = monoDigits(zeroPad(minutes));
       let dayStr = getDay3(time.getDay());
       let dateStr = time.getDate();
@@ -107,13 +109,13 @@ sm.addState(
       minutesArc.tween(minutesArc.angle, minutesAngle, MEDIUM_DUR);
       hoursArc.tween(hoursArc.angle, hoursAngle, LONG_DUR);
 
-      if (seconds != 0) return;
+      if (seconds !== 0) return;
       secondsArc.tween(-360, 0, SHORT_DUR + 4, "inOutQuart");
 
-      if (minutes != 0) return;
+      if (minutes !== 0) return;
       minutesArc.tween(-360, 0, MEDIUM_DUR + 4, "inOutQuart");
 
-      if (hours != 0) return;
+      if (hours !== 0) return;
       hoursArc.tween(-360, 0, LONG_DUR + 4, "inOutQuart");
     }
   })

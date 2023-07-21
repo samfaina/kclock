@@ -2,6 +2,8 @@ import { settingsStorage } from "settings";
 
 export function initializeSettings() {
   console.log("Initializing settings");
+
+  setDefaultSetting("timeFormat", JSON.stringify({ values: [{ name: "24h", value: "24" }], selected: [0] }));
   setDefaultSetting("units", JSON.stringify({ values: [{ name: "ºC", value: "metric" }], selected: [0] }));
   setDefaultSetting("refreshRate", JSON.stringify({ values: [{ name: "On wake", value: "onWake" }], selected: [0] }));
   setDefaultSetting("toggleDeviceLocation", "true");
@@ -42,6 +44,7 @@ export function getTextInputSetting(key, defaultValue) {
 
 export function getUpdatedSettings() {
   const settings = {
+    timeFormat: getSingleSelectSetting("timeFormat", "24h"),
     units: getSingleSelectSetting("units", "metric"),
     refreshRate: getSingleSelectSetting("refreshRate", "onWake"),
     toggleDeviceLocation: getToggleSetting("toggleDeviceLocation", true),

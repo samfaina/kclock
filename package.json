@@ -1,5 +1,6 @@
 {
   "fitbit": {
+    "appUUID": "1851b871-fbba-4b85-ae9f-bd8e0c333aed",
     "appType": "clockface",
     "appDisplayName": "kClock",
     "iconFile": "resources/icon.png",
@@ -13,22 +14,19 @@
     ],
     "buildTargets": [
       "meson",
-      "gemini"
+      "gemini",
+      "mira"
     ],
     "i18n": {
       "en": {
         "name": "kClock"
-      },
-      "es": {
-        "name": "kClock"
       }
     },
-    "defaultLanguage": "en-US",
-    "appUUID": "80cc56f7-5be6-45fa-a9b0-bc3b4bf2a17d"
+    "defaultLanguage": "en-US"
   },
   "devDependencies": {
-    "@fitbit/sdk": "~3.1.2",
-    "@fitbit/sdk-cli": "^1.6.3"
+    "@fitbit/sdk": "~4.3.2",
+    "@fitbit/sdk-cli": "^1.7.3"
   },
   "scripts": {
     "build": "fitbit-build"
